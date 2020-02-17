@@ -1,5 +1,0 @@
-CMPS299 Project Diary:
-
-Monday, February 10, 2020:
-	Joe Abi Nassif:
-		I read from different papers about position-based dynamics in general (main loop, idea of constraints, etc) and cloths in particular (mesh representation, constraints, etc). I also experimented with mesh creation in Unity3D using vertices and indices and read about the half-edge data structure which helps describe and iterate over meshes.
