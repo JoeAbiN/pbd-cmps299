@@ -1,0 +1,12 @@
+1st step: Downloaded Openmesh source files.
+2nd step: downloaded Cmake & cmakegui (will set source as openmesh root path)
+3rd step: create a build directory in root openmesh folder (to be selected as build location in cmake gui)
+4th step: in Openmesh...Apps create a project folder and include cmakelists.txt (copy mine) and add source .cc file
+5th step in Apps cmakelists.txt add subdirectory to new directrory.
+6th step: configure and build. This will build a visual studio project in the root build directory.
+7th step: Open the built VS project and build with Visual studio. This will create a .off file of the compiled openmesh .cc file
+8th step: download openflipper pre-compiled
+9th step: Import created .off file in openflipper and add save object (to properly configure the .off file)
+10th step: Download custom scripts for unity (to convert .off file to .asset file)
+11th step: Add both scripts to unity assets folder and add updated .off file to assets in unity.
+12th step: Click on .off asset in unity and select from the custom menu "Off to mesh". The asset will be in your unity assets folder
