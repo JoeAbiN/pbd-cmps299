@@ -29,4 +29,7 @@ I'm now familiar with the half-edge structure, and the implementations of the Ha
 ## Thursday, February 27, 2020:
 
 ### Joe Abi Nassif:
-I programmed a simple mesh animation to get an idea on how the final physically-based animation would look like on the cloth, and began researching various physics engines and libraries which could be used in Unity to simulate position-based dynamics (e.g. Nvidia Flex). 
+I programmed a simple mesh animation to get an idea on how the final physically-based animation would look like on the cloth, and began researching various physics engines and libraries which could be used in Unity to simulate position-based dynamics (e.g. Nvidia Flex).
+
+### Hassan Faour & Mohammed Al Makdah:
+We were able to render vertices as spheres in unity, after tinkering with the existing code for the flag animation. We Cloned and deleted instances of a sphere (with suitable dimentions) every time the flag moved with the animation. We found that instead of cloning and deleting the spheres we should probably instantiate them and move them with the vertices instead. Will try to create the net this week by also rendering edges as cylinders, combined with spheres for vertices. 
