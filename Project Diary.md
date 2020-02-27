@@ -25,3 +25,8 @@ I spent the last week trying to find an acceptable working way to get a built Op
 
 ### Mohammed Al Makdah:
 I'm now familiar with the half-edge structure, and the implementations of the HalfEdge, Edge, Face, and Vertex in C++. I am now looking up into the method that hassan provided in order compile and use OpenMesh in Unity.
+
+## Thursday, February 27, 2020:
+
+### Joe Abi Nassif:
+I programmed a simple mesh animation to get an idea on how the final physically-based animation would look like on the cloth, and began researching various physics engines and libraries which could be used in Unity to simulate position-based dynamics (e.g. Nvidia Flex). 
