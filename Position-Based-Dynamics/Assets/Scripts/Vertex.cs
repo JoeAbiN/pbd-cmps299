@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Vertex {
     public Vector3 position;
-
+    
     //The outgoing halfedge (a halfedge that starts at this vertex)
     //Doesnt matter which edge we connect to it
     public HalfEdge halfEdge;
