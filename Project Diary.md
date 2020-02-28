@@ -37,4 +37,4 @@ We were able to render vertices as spheres in unity, after tinkering with the ex
 ## Friday, February 28, 2020:
 
 ### Hassan Faour:
-I fixed the issue mentioned yesterday with the spheres. Instead of cloning them continuously, they are not initialized once and move with the vertices of the flag.I also Upgraded the version of the project to match tht latest Unity version.
+I fixed the issue mentioned yesterday with the spheres. Instead of cloning them continuously, they are not initialized once and move with the vertices of the flag.I also Upgraded the version of the project to match the latest Unity version.
