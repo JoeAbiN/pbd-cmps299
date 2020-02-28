@@ -33,3 +33,8 @@ I programmed a simple mesh animation to get an idea on how the final physically-
 
 ### Hassan Faour & Mohammed Al Makdah:
 We were able to render vertices as spheres in unity, after tinkering with the existing code for the flag animation. We Cloned and deleted instances of a sphere (with suitable dimentions) every time the flag moved with the animation. We found that instead of cloning and deleting the spheres we should probably instantiate them and move them with the vertices instead. Will try to create the net this week by also rendering edges as cylinders, combined with spheres for vertices. 
+
+## Friday, February 28, 2020:
+
+### Hassan Faour:
+I fixed the issue mentioned yesterday with the spheres. Instead of cloning them continuously, they are not initialized once and move with the vertices of the flag.I also Upgraded the version of the project to match tht latest Unity version.
