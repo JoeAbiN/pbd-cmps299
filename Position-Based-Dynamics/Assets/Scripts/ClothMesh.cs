@@ -5,6 +5,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(MeshFilter), typeof(MeshRenderer))]
 public class ClothMesh : MonoBehaviour {
+    
     private Vertex[] vertices;
     private int[] indices;
     private List<Triangle> triangles = new List<Triangle>();
@@ -12,10 +13,10 @@ public class ClothMesh : MonoBehaviour {
     public int xSize = 10;
     public int ySize = 10;
     public GameObject sphere;
-    public GameObject cylinder;
+    //public GameObject cylinder;
     List<GameObject> sphereArray = new List<GameObject>();
-    List<GameObject> cylinderArray = new List<GameObject>();
-    List<HalfEdge> edges = new List<HalfEdge>();
+    //List<GameObject> cylinderArray = new List<GameObject>();
+    //List<HalfEdge> edges = new List<HalfEdge>();
 
     void Start() {
         //The MeshFilter component's mesh field stores information about vertices and triangles and uses them to render the mesh
@@ -28,13 +29,16 @@ public class ClothMesh : MonoBehaviour {
                 vertices[i] = new Vertex(new Vector3(x, y));
             }
         }
+
+        /*
         for (int i =0; i < vertices.Length; i++) {
-
+            edges.Add(new HalfEdge())
         }
-
+        */
         for (int i = 0; i < vertices.Length; i++) {
             sphereArray.Add(Instantiate(sphere, vertices[i].position, Quaternion.identity));
         }
+
         indices = new int[xSize * ySize * 6];
         for (int ti = 0, vi = 0, y = 0; y < ySize; y++, vi++) {
             for (int x = 0; x < xSize; x++, ti += 6, vi++) {
