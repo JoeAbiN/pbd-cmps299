@@ -65,6 +65,8 @@
      <Compile Include="Assets\Scripts\ClothMesh.cs" />
      <Compile Include="Assets\Scripts\Edge.cs" />
      <Compile Include="Assets\Scripts\HalfEdge.cs" />
+     <Compile Include="Assets\Scripts\ObjectFileFormat.cs" />
+     <Compile Include="Assets\Scripts\ObjectFileFormatEditor.cs" />
      <Compile Include="Assets\Scripts\Plane.cs" />
      <Compile Include="Assets\Scripts\Triangle.cs" />
      <Compile Include="Assets\Scripts\Vertex.cs" />
