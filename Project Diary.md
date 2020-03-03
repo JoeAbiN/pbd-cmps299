@@ -38,3 +38,8 @@ We were able to render vertices as spheres in unity, after tinkering with the ex
 
 ### Hassan Faour:
 I fixed the issue mentioned yesterday with the spheres. Instead of cloning them continuously, they are not initialized once and move with the vertices of the flag.I also Upgraded the version of the project to match the latest Unity version.
+
+## Monday, March 2, 2020:
+
+### Hassan Faour, Joe Abi Nassif & Mohammad:
+We all had an online meeting to discuss the project. We wanted to create an object at least for the net using Openmesh. With Joe's help Hassan created the mesh on his computer, using Vertices and edges between them, while Mohammad was familiarizing himself with Openmesh. The Mesh was imported to Unity as an .obj file.
