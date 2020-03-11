@@ -52,4 +52,4 @@ I completed the net, by adding the roof, right and left parts of the net.
 ## Wednesday, March 11, 2020:
 
 ### Hassan Faour:
-I created a frame for the goal using the Probuilder too.
+I created a frame for the goal using the Probuilder tool.
