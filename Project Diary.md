@@ -43,3 +43,8 @@ I fixed the issue mentioned yesterday with the spheres. Instead of cloning them 
 
 ### Hassan Faour, Joe Abi Nassif & Mohammad:
 We all had an online meeting to discuss the project. We wanted to create an object at least for the net using Openmesh. With Joe's help Hassan created the mesh on his computer, using Vertices and edges between them, while Mohammad was familiarizing himself with Openmesh. The Mesh was imported to Unity as an .obj file.
+
+## Tuesday, March 10, 2020:
+
+### Hassan Faour:
+I completed the net, by adding the roof, right and left parts of the net.
