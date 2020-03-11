@@ -48,3 +48,8 @@ We all had an online meeting to discuss the project. We wanted to create an obje
 
 ### Hassan Faour:
 I completed the net, by adding the roof, right and left parts of the net.
+
+## Wednesday, March 11, 2020:
+
+### Hassan Faour:
+I created a frame for the goal using the Probuilder too.
