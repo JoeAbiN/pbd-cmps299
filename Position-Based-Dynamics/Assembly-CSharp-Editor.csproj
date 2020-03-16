@@ -55,6 +55,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\NVIDIA\Flex\Editor\Editors\FlexActorEditor.cs" />
+     <Compile Include="Assets\NVIDIA\Flex\Editor\Editors\FlexArrayActorEditor.cs" />
+     <Compile Include="Assets\NVIDIA\Flex\Editor\Editors\FlexArrayAssetEditor.cs" />
+     <Compile Include="Assets\NVIDIA\Flex\Editor\Editors\FlexAssetEditor.cs" />
+     <Compile Include="Assets\NVIDIA\Flex\Editor\Editors\FlexClothActorEditor.cs" />
+     <Compile Include="Assets\NVIDIA\Flex\Editor\Editors\FlexClothAssetEditor.cs" />
+     <Compile Include="Assets\NVIDIA\Flex\Editor\Editors\FlexClothDeformationEditor.cs" />
+     <Compile Include="Assets\NVIDIA\Flex\Editor\Editors\FlexContainerEditor.cs" />
+     <Compile Include="Assets\NVIDIA\Flex\Editor\Editors\FlexEditor.cs" />
+     <Compile Include="Assets\NVIDIA\Flex\Editor\Editors\FlexFluidMaterialEditor.cs" />
+     <Compile Include="Assets\NVIDIA\Flex\Editor\Editors\FlexFluidRendererEditor.cs" />
+     <Compile Include="Assets\NVIDIA\Flex\Editor\Editors\FlexSoftActorEditor.cs" />
+     <Compile Include="Assets\NVIDIA\Flex\Editor\Editors\FlexSoftAssetEditor.cs" />
+     <Compile Include="Assets\NVIDIA\Flex\Editor\Editors\FlexSoftSkinningEditor.cs" />
+     <Compile Include="Assets\NVIDIA\Flex\Editor\Editors\FlexSolidActorEditor.cs" />
+     <Compile Include="Assets\NVIDIA\Flex\Editor\Editors\FlexSolidAssetEditor.cs" />
+     <Compile Include="Assets\NVIDIA\Flex\Editor\Editors\FlexSourceActorEditor.cs" />
+     <Compile Include="Assets\NVIDIA\Flex\Editor\Editors\FlexSourceAssetEditor.cs" />
+     <Compile Include="Assets\NVIDIA\Flex\Editor\Tests\FlexActorTests.cs" />
+     <Compile Include="Assets\NVIDIA\Flex\Editor\Tests\FlexAssetTests.cs" />
+     <Compile Include="Assets\NVIDIA\Flex\Editor\Tests\FlexExtTests.cs" />
+     <Compile Include="Assets\NVIDIA\Flex\Editor\Tests\FlexTests.cs" />
+     <Compile Include="Assets\NVIDIA\Flex\Editor\Tests\FlexUtilsTests.cs" />
      <Compile Include="Assets\ProCore\ProBuilder\About\Editor\pb_AboutWindow.cs" />
      <Compile Include="Assets\ProCore\ProBuilder\About\Editor\pb_UpdateAvailable.cs" />
      <Compile Include="Assets\ProCore\ProBuilder\About\Editor\pb_UpdateCheck.cs" />
@@ -106,67 +129,67 @@
      <Compile Include="Assets\ProCore\ProBuilder\Editor\pb_Preferences.cs" />
      <Compile Include="Assets\ProCore\ProBuilder\Editor\pb_ScenePostProcessor.cs" />
  <Reference Include="UnityEditor.TestRunner">
- <HintPath>C:/Users/TrueB/Documents/GitHub/pbd-cmps299/Position-Based-Dynamics/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
+ <HintPath>D:/AUB/Spring 19-20/CMPS 299/project/pbd-cmps299/Position-Based-Dynamics/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.TestRunner">
- <HintPath>C:/Users/TrueB/Documents/GitHub/pbd-cmps299/Position-Based-Dynamics/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
+ <HintPath>D:/AUB/Spring 19-20/CMPS 299/project/pbd-cmps299/Position-Based-Dynamics/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>C:/Users/TrueB/Documents/GitHub/pbd-cmps299/Position-Based-Dynamics/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>D:/AUB/Spring 19-20/CMPS 299/project/pbd-cmps299/Position-Based-Dynamics/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="com.unity.multiplayer-hlapi.Editor">
- <HintPath>C:/Users/TrueB/Documents/GitHub/pbd-cmps299/Position-Based-Dynamics/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
+ <HintPath>D:/AUB/Spring 19-20/CMPS 299/project/pbd-cmps299/Position-Based-Dynamics/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>C:/Users/TrueB/Documents/GitHub/pbd-cmps299/Position-Based-Dynamics/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>D:/AUB/Spring 19-20/CMPS 299/project/pbd-cmps299/Position-Based-Dynamics/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/TrueB/Documents/GitHub/pbd-cmps299/Position-Based-Dynamics/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>D:/AUB/Spring 19-20/CMPS 299/project/pbd-cmps299/Position-Based-Dynamics/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Users/TrueB/Documents/GitHub/pbd-cmps299/Position-Based-Dynamics/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>D:/AUB/Spring 19-20/CMPS 299/project/pbd-cmps299/Position-Based-Dynamics/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>C:/Users/TrueB/Documents/GitHub/pbd-cmps299/Position-Based-Dynamics/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>D:/AUB/Spring 19-20/CMPS 299/project/pbd-cmps299/Position-Based-Dynamics/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>C:/Users/TrueB/Documents/GitHub/pbd-cmps299/Position-Based-Dynamics/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>D:/AUB/Spring 19-20/CMPS 299/project/pbd-cmps299/Position-Based-Dynamics/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="com.unity.multiplayer-weaver.Editor">
- <HintPath>C:/Users/TrueB/Documents/GitHub/pbd-cmps299/Position-Based-Dynamics/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
+ <HintPath>D:/AUB/Spring 19-20/CMPS 299/project/pbd-cmps299/Position-Based-Dynamics/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.XR.LegacyInputHelpers">
- <HintPath>C:/Users/TrueB/Documents/GitHub/pbd-cmps299/Position-Based-Dynamics/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+ <HintPath>D:/AUB/Spring 19-20/CMPS 299/project/pbd-cmps299/Position-Based-Dynamics/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>C:/Users/TrueB/Documents/GitHub/pbd-cmps299/Position-Based-Dynamics/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>D:/AUB/Spring 19-20/CMPS 299/project/pbd-cmps299/Position-Based-Dynamics/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Sprite.Editor">
- <HintPath>C:/Users/TrueB/Documents/GitHub/pbd-cmps299/Position-Based-Dynamics/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+ <HintPath>D:/AUB/Spring 19-20/CMPS 299/project/pbd-cmps299/Position-Based-Dynamics/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Tilemap.Editor">
- <HintPath>C:/Users/TrueB/Documents/GitHub/pbd-cmps299/Position-Based-Dynamics/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+ <HintPath>D:/AUB/Spring 19-20/CMPS 299/project/pbd-cmps299/Position-Based-Dynamics/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.SpatialTracking">
- <HintPath>C:/Users/TrueB/Documents/GitHub/pbd-cmps299/Position-Based-Dynamics/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
+ <HintPath>D:/AUB/Spring 19-20/CMPS 299/project/pbd-cmps299/Position-Based-Dynamics/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.SpatialTracking">
- <HintPath>C:/Users/TrueB/Documents/GitHub/pbd-cmps299/Position-Based-Dynamics/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
+ <HintPath>D:/AUB/Spring 19-20/CMPS 299/project/pbd-cmps299/Position-Based-Dynamics/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/TrueB/Documents/GitHub/pbd-cmps299/Position-Based-Dynamics/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>D:/AUB/Spring 19-20/CMPS 299/project/pbd-cmps299/Position-Based-Dynamics/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.DataPrivacy">
- <HintPath>C:/Users/TrueB/Documents/GitHub/pbd-cmps299/Position-Based-Dynamics/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+ <HintPath>D:/AUB/Spring 19-20/CMPS 299/project/pbd-cmps299/Position-Based-Dynamics/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.XR.LegacyInputHelpers">
- <HintPath>C:/Users/TrueB/Documents/GitHub/pbd-cmps299/Position-Based-Dynamics/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+ <HintPath>D:/AUB/Spring 19-20/CMPS 299/project/pbd-cmps299/Position-Based-Dynamics/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>C:/Users/TrueB/Documents/GitHub/pbd-cmps299/Position-Based-Dynamics/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>D:/AUB/Spring 19-20/CMPS 299/project/pbd-cmps299/Position-Based-Dynamics/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="com.unity.multiplayer-hlapi.Runtime">
- <HintPath>C:/Users/TrueB/Documents/GitHub/pbd-cmps299/Position-Based-Dynamics/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
+ <HintPath>D:/AUB/Spring 19-20/CMPS 299/project/pbd-cmps299/Position-Based-Dynamics/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.21f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -355,40 +378,40 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.21f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="ProBuilderCore-Unity5">
- <HintPath>C:/Users/TrueB/Documents/GitHub/pbd-cmps299/Position-Based-Dynamics/Assets/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
+ <HintPath>D:/AUB/Spring 19-20/CMPS 299/project/pbd-cmps299/Position-Based-Dynamics/Assets/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
  </Reference>
  <Reference Include="ProBuilderMeshOps-Unity5">
- <HintPath>C:/Users/TrueB/Documents/GitHub/pbd-cmps299/Position-Based-Dynamics/Assets/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
+ <HintPath>D:/AUB/Spring 19-20/CMPS 299/project/pbd-cmps299/Position-Based-Dynamics/Assets/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
  </Reference>
  <Reference Include="KdTreeLib">
- <HintPath>C:/Users/TrueB/Documents/GitHub/pbd-cmps299/Position-Based-Dynamics/Assets/ProCore/ProBuilder/Classes/ClassesLib/KdTreeLib.dll</HintPath>
+ <HintPath>D:/AUB/Spring 19-20/CMPS 299/project/pbd-cmps299/Position-Based-Dynamics/Assets/ProCore/ProBuilder/Classes/ClassesLib/KdTreeLib.dll</HintPath>
  </Reference>
  <Reference Include="pb_Stl">
- <HintPath>C:/Users/TrueB/Documents/GitHub/pbd-cmps299/Position-Based-Dynamics/Assets/ProCore/ProBuilder/Classes/ClassesLib/pb_Stl.dll</HintPath>
+ <HintPath>D:/AUB/Spring 19-20/CMPS 299/project/pbd-cmps299/Position-Based-Dynamics/Assets/ProCore/ProBuilder/Classes/ClassesLib/pb_Stl.dll</HintPath>
  </Reference>
  <Reference Include="Poly2Tri">
- <HintPath>C:/Users/TrueB/Documents/GitHub/pbd-cmps299/Position-Based-Dynamics/Assets/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
+ <HintPath>D:/AUB/Spring 19-20/CMPS 299/project/pbd-cmps299/Position-Based-Dynamics/Assets/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
  </Reference>
  <Reference Include="ProBuilderEditor-Unity5">
- <HintPath>C:/Users/TrueB/Documents/GitHub/pbd-cmps299/Position-Based-Dynamics/Assets/ProCore/ProBuilder/Editor/ProBuilderEditor-Unity5.dll</HintPath>
+ <HintPath>D:/AUB/Spring 19-20/CMPS 299/project/pbd-cmps299/Position-Based-Dynamics/Assets/ProCore/ProBuilder/Editor/ProBuilderEditor-Unity5.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Advertisements">
- <HintPath>C:/Users/TrueB/Documents/GitHub/pbd-cmps299/Position-Based-Dynamics/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
+ <HintPath>D:/AUB/Spring 19-20/CMPS 299/project/pbd-cmps299/Position-Based-Dynamics/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Editor">
- <HintPath>C:/Users/TrueB/Documents/GitHub/pbd-cmps299/Position-Based-Dynamics/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
+ <HintPath>D:/AUB/Spring 19-20/CMPS 299/project/pbd-cmps299/Position-Based-Dynamics/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.StandardEvents">
- <HintPath>C:/Users/TrueB/Documents/GitHub/pbd-cmps299/Position-Based-Dynamics/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
+ <HintPath>D:/AUB/Spring 19-20/CMPS 299/project/pbd-cmps299/Position-Based-Dynamics/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Tracker">
- <HintPath>C:/Users/TrueB/Documents/GitHub/pbd-cmps299/Position-Based-Dynamics/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
+ <HintPath>D:/AUB/Spring 19-20/CMPS 299/project/pbd-cmps299/Position-Based-Dynamics/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Purchasing">
- <HintPath>C:/Users/TrueB/Documents/GitHub/pbd-cmps299/Position-Based-Dynamics/Library/PackageCache/com.unity.purchasing@2.0.6/Editor/UnityEditor.Purchasing.dll</HintPath>
+ <HintPath>D:/AUB/Spring 19-20/CMPS 299/project/pbd-cmps299/Position-Based-Dynamics/Library/PackageCache/com.unity.purchasing@2.0.6/Editor/UnityEditor.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
- <HintPath>C:/Users/TrueB/Documents/GitHub/pbd-cmps299/Position-Based-Dynamics/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
+ <HintPath>D:/AUB/Spring 19-20/CMPS 299/project/pbd-cmps299/Position-Based-Dynamics/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.21f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
