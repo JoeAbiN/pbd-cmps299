@@ -53,3 +53,8 @@ I completed the net, by adding the roof, right and left parts of the net.
 
 ### Hassan Faour:
 I created a frame for the goal using the Probuilder tool.
+
+## Monday, March 16, 2020:
+
+### Joe Abi Nassif:
+I integrated NVIDIA Flex with the project to apply the cloth physics to the net mesh. I also began working on the interactivity of the scene by adding the ability to shoot the ball using the spacebar key.
