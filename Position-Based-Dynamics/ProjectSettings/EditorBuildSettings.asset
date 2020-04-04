@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Field.unity
+    guid: aebe25f1fe8f35b4ab06f48b6dfd693e
   m_configObjects: {}
