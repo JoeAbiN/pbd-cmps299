@@ -15,8 +15,9 @@ public class Ball : MonoBehaviour {
 
     void Start() {
         rigidbody = GetComponent<Rigidbody>();
+        // Time.fixedDeltaTime /= 5;
         dt = Time.fixedDeltaTime;
-        // Debug.Log(dt);
+        Debug.Log(dt);
     }
 
     void Update() {
@@ -45,12 +46,13 @@ public class Ball : MonoBehaviour {
         //     Debug.Log("Did not Hit");
         // }
 
-        // if (d.magnitude < 1) {
-        //     Debug.DrawRay(transform.position, d * 1000, Color.yellow);
+        if (d.magnitude < transform.localScale.x) {
+            Debug.DrawRay(transform.position, d * 1000, Color.yellow);
+            rigidbody.velocity = rigidbody.velocity * d.magnitude;
         
-        // } else {
-        //     Debug.DrawRay(transform.position, d * 1000, Color.white);
-        // }
+        } else {
+            Debug.DrawRay(transform.position, d * 1000, Color.white);
+        }
 
         // Debug.DrawRay(transform.position, rigidbody.velocity * 1000, Color.red);
     }
