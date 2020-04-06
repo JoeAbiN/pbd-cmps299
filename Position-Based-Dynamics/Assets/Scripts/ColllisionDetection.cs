@@ -9,7 +9,13 @@ public class ColllisionDetection : MonoBehaviour {
     private Bounds ballBounds;
     private Bounds netBounds;
 
+    private Vector3 origiBall;
+    private Vector3 origiNet;
+
     void Start() {
+        origiBall = ball.transform.position;
+        origiNet = net.transform.position;
+
         ballBounds = ball.GetComponent<Renderer>().bounds;
         netBounds = net.GetComponent<Renderer>().bounds;
     }
@@ -20,6 +26,15 @@ public class ColllisionDetection : MonoBehaviour {
         }
 
         Debug.Log(ballBounds.Intersects(netBounds));
+
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            ball.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            net.GetComponent<Rigidbody>().velocity = Vector3.zero;
+
+            ball.transform.position = origiBall;
+            net.transform.position = origiNet;
+        }
     }
 
     void OnDrawGizmos() {
