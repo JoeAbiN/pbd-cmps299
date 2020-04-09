@@ -8,9 +8,6 @@ public class UIText : MonoBehaviour
     public GameObject target;
 
     void Update() {
-        GetComponent<Text>().text = "d: " + target.GetComponent<Ball>().d.ToString() + "\n||d||: " +
-                                    target.GetComponent<Ball>().d.magnitude + "\nv: " + 
-                                    target.GetComponent<Rigidbody>().velocity.ToString() + "\n||v||: " +
-                                    target.GetComponent<Rigidbody>().velocity.magnitude;
+        GetComponent<Text>().text = "Force: " + target.GetComponent<Ball>().force.ToString();
     }
 }

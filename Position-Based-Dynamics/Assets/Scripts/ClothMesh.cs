@@ -12,9 +12,9 @@ public class ClothMesh : MonoBehaviour {
     private Mesh mesh;
     public int xSize = 10;
     public int ySize = 10;
-    public GameObject sphere;
+    //public GameObject sphere;
     //public GameObject cylinder;
-    List<GameObject> sphereArray = new List<GameObject>();
+    //List<GameObject> sphereArray = new List<GameObject>();
     //List<GameObject> cylinderArray = new List<GameObject>();
     //List<HalfEdge> edges = new List<HalfEdge>();
 
@@ -35,9 +35,9 @@ public class ClothMesh : MonoBehaviour {
             edges.Add(new HalfEdge())
         }
         */
-        for (int i = 0; i < vertices.Length; i++) {
+        /*for (int i = 0; i < vertices.Length; i++) {
             sphereArray.Add(Instantiate(sphere, vertices[i].position, Quaternion.identity));
-        }
+        }*/
 
         indices = new int[xSize * ySize * 6];
         for (int ti = 0, vi = 0, y = 0; y < ySize; y++, vi++) {
@@ -60,10 +60,10 @@ public class ClothMesh : MonoBehaviour {
 
     void Update() {
         //Simple movement: every vertex's z component is set to be z = sin(time - x) with x being its x component
-        for (int i = 0; i < vertices.Length; i++) {
+        /*for (int i = 0; i < vertices.Length; i++) {
             Vector3 tempPos = vertices[i].position;
             vertices[i].position = new Vector3(tempPos.x, tempPos.y, (float)Math.Sin(Time.time - tempPos.x));
-        }
+        }*/
 
         Render();
     }
@@ -73,11 +73,11 @@ public class ClothMesh : MonoBehaviour {
         mesh.Clear();
         mesh.vertices = Vertex.toVector3(vertices);
         //Moving the spheres with every render
-        for (int i = 0; i < sphereArray.Count; i++) {
+        /*for (int i = 0; i < sphereArray.Count; i++) {
             sphereArray[i].transform.position = vertices[i].position;
             sphereArray[i].transform.position = vertices[i].position;
 
-        }
+        }*/
         mesh.triangles = Triangle.toIndices(triangles.ToArray(), vertices);
         mesh.RecalculateNormals();
     }

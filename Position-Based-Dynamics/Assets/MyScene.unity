@@ -3752,6 +3752,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 25
+  succForce: 2
+  target: {fileID: 0}
+  d: {x: 0, y: 0, z: 0}
 --- !u!1 &1044030470
 GameObject:
   m_ObjectHideFlags: 0
@@ -3920,7 +3923,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1381205931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3935,7 +3938,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xSize: 10
   ySize: 10
-  sphere: {fileID: 1922972159}
 --- !u!23 &1381205932
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4677,9 +4679,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tangentSpaceUpdate: 4
---- !u!1 &1922972159 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3781859445700815300, guid: 91217c376d56e6242aaddc9e7bd148b6,
-    type: 3}
-  m_PrefabInstance: {fileID: 411228797}
-  m_PrefabAsset: {fileID: 0}

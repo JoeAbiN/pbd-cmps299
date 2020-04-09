@@ -40,7 +40,7 @@ MonoBehaviour:
   m_substepCount: 10
   m_iterationCount: 4
   m_gravity: {x: 0, y: -9.81, z: 0}
-  m_radius: 0.5
+  m_radius: 10
   m_solidRest: 0.1
   m_fluidRest: 0.095
   m_staticFriction: 0.7

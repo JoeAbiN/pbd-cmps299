@@ -4,7 +4,7 @@ using System.IO;
 
 public class ObjectFileFormatEditor
 {
-    [MenuItem("Assets/OFF/Create Mesh From OFF")]
+    /*[MenuItem("Assets/OFF/Create Mesh From OFF")]
     public static void CreateMeshFromOff()
     {
         var path = AssetDatabase.GetAssetPath(Selection.activeObject);
@@ -37,5 +37,5 @@ public class ObjectFileFormatEditor
         mesh.RecalculateNormals();
         EditorUtility.SetDirty(mesh);
         AssetDatabase.SaveAssets();
-    }
+    }*/
 }

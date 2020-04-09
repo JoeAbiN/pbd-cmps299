@@ -4,88 +4,52 @@ using UnityEngine;
 using NVIDIA.Flex;
 
 public class Ball : MonoBehaviour {
-    public float force = 25f;
-    public float succForce = 2f;
+    private Vector3 origiPos;
+    public float force = 0;
+    public float maxForce = 1000;
     private Rigidbody rigidbody;
-    public GameObject target;
-
+    public Transform camera;
+    private Vector3 F;
     float dt;
-    public Vector3 d;
-    private Vector3 targetPoint;
+    public GameObject shotBar;
+    private RectTransform barTransform;
 
     void Start() {
+        origiPos = transform.position;
         rigidbody = GetComponent<Rigidbody>();
-        // Time.fixedDeltaTime /= 5;
         dt = Time.fixedDeltaTime;
-        Debug.Log(dt);
+        force = 0;
+        barTransform = shotBar.GetComponent<RectTransform>();
+        barTransform.sizeDelta = new Vector2(0, barTransform.sizeDelta.y);
     }
 
     void Update() {
-        targetPoint = GetComponent<NearestPointTest>().targetPoint;
-        d = targetPoint - transform.position;
+        if (Input.GetKey(KeyCode.Space)) {
+            if (force < maxForce) {
+                force += 50;
+            }
 
-        // int layerMask = 1 << 8;
-
-        // layerMask = ~layerMask;
-
-        // RaycastHit hit;
-
-        // if (Physics.Raycast(transform.position, 
-        //                     d, 
-        //                     out hit, Mathf.Infinity)) {
-
-        //     Debug.DrawRay(transform.position, 
-        //                   d * hit.distance, 
-        //                   Color.yellow);
-
-        //     // Debug.DrawRay(transform.position, transform.position + rigidbody.velocity * 100, Color.red);
-        // }
-        // else
-        // {
-        //     Debug.DrawRay(transform.position, d * 1000, Color.white);
-        //     Debug.Log("Did not Hit");
-        // }
-
-        if (d.magnitude < transform.localScale.x) {
-            Debug.DrawRay(transform.position, d * 1000, Color.yellow);
-            rigidbody.velocity = rigidbody.velocity * d.magnitude;
-        
-        } else {
-            Debug.DrawRay(transform.position, d * 1000, Color.white);
+            barTransform.sizeDelta = new Vector2(force, barTransform.sizeDelta.y);
         }
 
-        // Debug.DrawRay(transform.position, rigidbody.velocity * 1000, Color.red);
+        if (Input.GetKeyDown(KeyCode.Z)) {
+            force = 0;
+            rigidbody.velocity = Vector3.zero;
+            transform.position = origiPos;
+        }
     }
 
     void FixedUpdate() {
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            // rigidbody.AddForce((Vector3.forward + Vector3.up) * force);
-            // Vector3 tempVelocity = rigidbody.velocity;
-            // rigidbody.velocity = new Vector3(tempVelocity.x, tempVelocity.y * force/2, tempVelocity.z * force);
-            
-            // rigidbody.AddForce(Vector3.forward * force + Vector3.up * force/2);
-            rigidbody.velocity = new Vector3(0, force*dt / 2, force*dt);
-
-            // Debug.Log(GetComponent<FlexSolidActor>().asset);
+        F = new Vector3(camera.forward.x, 0.5f, camera.forward.z);
+        Debug.DrawRay(transform.position, F * 10, Color.red);
+        if (Input.GetKeyUp(KeyCode.Space)) {
+            barTransform.sizeDelta = new Vector2(0, barTransform.sizeDelta.y);
+            // rigidbody.velocity = new Vector3(0, force*dt / 2, force*dt);
+            // F = camera.worldToLocalMatrix.MultiplyVector(camera.forward);
+            Debug.Log(F);
+            rigidbody.velocity = F * force * dt;
+            // rigidbody.velocity = new Vector3(0, F.y * force/2 * dt, F.z * force * dt);
         }
 
-        // rigidbody.velocity = rigidbody.velocity - rigidbody.velocity/d
-        // if (d.magnitude < 1) { rigidbody.velocity = rigidbody.velocity / d.magnitude ; }
-
-        // if (d.magnitude < 1) { rigidbody.velocity = rigidbody.velocity - d/d.magnitude; }
     }
-
-    void OnTriggerEnter(Collider other) {
-        if (other.gameObject.CompareTag("Net")) {
-            Debug.Log("hit net");
-            rigidbody.velocity = Vector3.zero;
-        }
-    }
-
-    // void OnDrawGizmos() {
-    //     Gizmos.color = Color.yellow;
-    //     Gizmos.DrawSphere(transform.position, 0.1f);
-    //     Gizmos.DrawWireCube(transform.position, transform.GetComponent<Renderer>().bounds.size);
-    //     Gizmos.DrawWireCube(target.transform.position, target.transform.GetComponent<Renderer>().bounds.size);
-    // }
 }

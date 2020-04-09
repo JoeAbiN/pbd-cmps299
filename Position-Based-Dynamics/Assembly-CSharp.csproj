@@ -2,8 +2,6 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
-    <CscToolPath>C:\Program Files\Unity\Hub\Editor\2019.2.21f1\Editor\Data\Tools\RoslynScripts</CscToolPath>
-    <CscToolExe>unity_csc.bat</CscToolExe>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -46,14 +44,6 @@
     <ImplicitlyExpandNETStandardFacades>false</ImplicitlyExpandNETStandardFacades>
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="UnityEngine">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2019.2.21f1\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2019.2.21f1\Editor\Data\Managed/UnityEditor.dll</HintPath>
-    </Reference>
-  </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\NVIDIA\Flex\Actors\FlexActor.cs" />
      <Compile Include="Assets\NVIDIA\Flex\Actors\FlexArrayActor.cs" />
@@ -110,10 +100,14 @@
      <Compile Include="Assets\Scripts\Ball.cs" />
      <Compile Include="Assets\Scripts\BallCam.cs" />
      <Compile Include="Assets\Scripts\Cam.cs" />
+     <Compile Include="Assets\Scripts\CamFollow.cs" />
      <Compile Include="Assets\Scripts\ClothMesh.cs" />
      <Compile Include="Assets\Scripts\ColllisionDetection.cs" />
+     <Compile Include="Assets\Scripts\DeferredFogEffect.cs" />
      <Compile Include="Assets\Scripts\Edge.cs" />
+     <Compile Include="Assets\Scripts\EmissiveOscillator.cs" />
      <Compile Include="Assets\Scripts\FlexCloth.cs" />
+     <Compile Include="Assets\Scripts\GPUInstancingTest.cs" />
      <Compile Include="Assets\Scripts\HalfEdge.cs" />
      <Compile Include="Assets\Scripts\KDTree.cs" />
      <Compile Include="Assets\Scripts\MyObiNet.cs" />
@@ -121,10 +115,15 @@
      <Compile Include="Assets\Scripts\ObjectFileFormat.cs" />
      <Compile Include="Assets\Scripts\ObjectFileFormatEditor.cs" />
      <Compile Include="Assets\Scripts\Plane.cs" />
+     <Compile Include="Assets\Scripts\TangentSpaceVisualizer.cs" />
      <Compile Include="Assets\Scripts\Triangle.cs" />
      <Compile Include="Assets\Scripts\UIText.cs" />
      <Compile Include="Assets\Scripts\Vertex.cs" />
      <Compile Include="Assets\Scripts\VertTriList.cs" />
+     <Compile Include="Assets\Torec\Subdivision\Assets\Subdivision.cs" />
+     <Compile Include="Assets\Torec\Subdivision\Demo\SubdivisionDemo.cs" />
+     <None Include="Assets\Shaders\My Lighting Input.cginc" />
+     <None Include="Assets\Shaders\My Shadows.cginc" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_TransparentOverlay.shader" />
      <None Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\README.txt" />
      <None Include="Assets\NVIDIA\Flex\Resources\Shaders\FluidDepthBlur.shader" />
@@ -132,6 +131,7 @@
      <None Include="Assets\ProCore\ProBuilder\About\changelog.txt" />
      <None Include="Assets\ProCore\ProBuilder\Shader\DiffuseVertexColor.shader" />
      <None Include="Assets\NVIDIA\Flex\Resources\Shaders\SurfaceShader.shader" />
+     <None Include="Assets\Shaders\My First Shader.shader" />
      <None Include="Assets\NVIDIA\Flex\Resources\Shaders\FluidThickness.shader" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_FaceHighlight.shader" />
      <None Include="Assets\NVIDIA\Flex\Resources\Shaders\SurfaceTest.shader" />
@@ -140,11 +140,14 @@
      <None Include="Assets\NVIDIA\Flex\Resources\Shaders\SourcePreview.shader" />
      <None Include="Assets\NVIDIA\Flex\Resources\Shaders\FlexDrawParticles.shader" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_UnlitSolidColor.shader" />
-     <None Include="Assets\NVIDIA\Flex\Resources\Shaders\FlexDrawFluid2.shader" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_ReferenceUnlit.shader" />
      <None Include="Assets\Obi\Resources\ObiMaterials\StandardBackfaces.shader" />
      <None Include="Assets\Obi\Resources\ObiMaterials\ObiParticles.cginc" />
-     <None Include="Assets\NVIDIA\Flex\Resources\Shaders\FlexDrawFluid.shader" />
+     <None Include="Assets\Shaders\DeferredFog.shader" />
+     <None Include="Assets\Shaders\My Lighting.cginc" />
+     <None Include="Assets\Shaders\Texture Splatting.shader" />
+     <None Include="Assets\Shaders\MyFlatWireframe.cginc" />
+     <None Include="Assets\Shaders\Tessellation Shader.shader" />
      <None Include="Assets\ProCore\ProBuilder\Shader\DiffuseTextureBlend.shader" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_StandardVertexColor.shader" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_VertexPicker.shader" />
@@ -154,25 +157,33 @@
      <None Include="Assets\Obi\Resources\ObiMaterials\SimpleParticleShader.shader" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_UnlitVertexColor.shader" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_FacePicker.shader" />
+     <None Include="Assets\Shaders\My First Lighting Shader.shader" />
      <None Include="Assets\NVIDIA\Flex\Resources\Shaders\FlexDrawFluid.cginc" />
+     <None Include="Assets\Shaders\MyDeferredShading.cginc" />
      <None Include="Assets\NVIDIA\Flex\Resources\Shaders\FluidComposite.shader" />
      <None Include="Assets\Obi\Resources\ObiMaterials\ObiUtils.cginc" />
      <None Include="Assets\ProCore\ProBuilder\About\Font\SIL Open Font License.txt" />
+     <None Include="Assets\Shaders\DeferredShading.shader" />
      <None Include="Assets\Obi\Resources\ObiMaterials\LitParticles.shader" />
+     <None Include="Assets\Shaders\My Lightmapping.cginc" />
      <None Include="Assets\ProCore\ProBuilder\About\pc_AboutEntry_ProBuilder.txt" />
      <None Include="Assets\Obi\CHANGELOG.txt" />
      <None Include="Assets\Obi\Resources\ObiMaterials\StandardVertexColors.shader" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_VertexShader.shader" />
      <None Include="Assets\NVIDIA\Flex\Resources\Shaders\FlexFluidShader.shader" />
+     <None Include="Assets\Shaders\Flat Wireframe Shader.shader" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_NormalPreview.shader" />
      <None Include="Assets\Obi\Resources\ObiMaterials\ObiEllipsoids.cginc" />
+     <None Include="Assets\Torec\Subdivision\readme.txt" />
      <None Include="Assets\Obi\Resources\ObiMaterials\DistanceFieldSlice.shader" />
      <None Include="Assets\Obi\Resources\ObiMaterials\UnityStandardCoreForwardSimpleBackfaces.cginc" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_ScrollHighlight.shader" />
      <None Include="Assets\ProCore\ProBuilder\readme.txt" />
+     <None Include="Assets\Shaders\MyTessellation.cginc" />
      <None Include="Assets\NVIDIA\Flex\Resources\Shaders\FlexPrepareFluid.shader" />
      <None Include="Assets\Obi\Resources\ObiMaterials\UnityStandardCoreBackfaces.cginc" />
      <None Include="Assets\Obi\Resources\ObiMaterials\UnityStandardCoreForwardBackfaces.cginc" />
+     <None Include="Assets\Shaders\Textured With Detail.shader" />
      <None Include="Assets\NVIDIA\Flex\Resources\Shaders\FluidDepth.shader" />
      <None Include="Assets\ProCore\ProBuilder\Shader\pb_SmoothingPreview.shader" />
  <Reference Include="Unity.Timeline.Editor">
@@ -231,6 +242,9 @@
  </Reference>
  <Reference Include="com.unity.multiplayer-hlapi.Runtime">
  <HintPath>D:/AUB/Spring 19-20/CMPS 299/project/pbd-cmps299/Position-Based-Dynamics/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.21f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.21f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -408,6 +422,9 @@
  </Reference>
  <Reference Include="UnityEngine.XRModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.21f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.21f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
  </Reference>
  <Reference Include="ProBuilderCore-Unity5">
  <HintPath>D:/AUB/Spring 19-20/CMPS 299/project/pbd-cmps299/Position-Based-Dynamics/Assets/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
@@ -790,12 +807,12 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Obi.csproj">
-      <Project>{E951B9D0-B668-7054-0242-E59679B28948}</Project>
+      <Project>{702A6671-C8D7-6261-B9B3-8CB94BA12F2F}</Project>
       <Name>Obi</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
