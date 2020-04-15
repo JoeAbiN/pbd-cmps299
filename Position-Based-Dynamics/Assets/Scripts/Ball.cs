@@ -5,12 +5,16 @@ using NVIDIA.Flex;
 
 public class Ball : MonoBehaviour {
     private Vector3 origiPos;
-    public float force = 0;
-    public float maxForce = 1000;
     private Rigidbody rigidbody;
     public Transform camera;
+    
+    public float force = 0;
+    public float maxForce = 1000;
     private Vector3 F;
     float dt;
+    
+    public float n = 5f;
+
     public GameObject shotBar;
     private RectTransform barTransform;
 
@@ -24,12 +28,18 @@ public class Ball : MonoBehaviour {
     }
 
     void Update() {
+        F = new Vector3(camera.forward.x, 0.5f, camera.forward.z);
+
         if (Input.GetKey(KeyCode.Space)) {
             if (force < maxForce) {
-                force += 50;
+                force += 10;
             }
+        }
 
-            barTransform.sizeDelta = new Vector2(force, barTransform.sizeDelta.y);
+        if (Input.GetKeyUp(KeyCode.Space)) {
+            barTransform.sizeDelta = new Vector2(0, barTransform.sizeDelta.y);
+            rigidbody.velocity = F * force * dt;
+            force = 0;
         }
 
         if (Input.GetKeyDown(KeyCode.Z)) {
@@ -37,19 +47,7 @@ public class Ball : MonoBehaviour {
             rigidbody.velocity = Vector3.zero;
             transform.position = origiPos;
         }
-    }
 
-    void FixedUpdate() {
-        F = new Vector3(camera.forward.x, 0.5f, camera.forward.z);
-        Debug.DrawRay(transform.position, F * 10, Color.red);
-        if (Input.GetKeyUp(KeyCode.Space)) {
-            barTransform.sizeDelta = new Vector2(0, barTransform.sizeDelta.y);
-            // rigidbody.velocity = new Vector3(0, force*dt / 2, force*dt);
-            // F = camera.worldToLocalMatrix.MultiplyVector(camera.forward);
-            Debug.Log(F);
-            rigidbody.velocity = F * force * dt;
-            // rigidbody.velocity = new Vector3(0, F.y * force/2 * dt, F.z * force * dt);
-        }
-
+        barTransform.sizeDelta = new Vector2(force / n, barTransform.sizeDelta.y);
     }
 }

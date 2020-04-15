@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Field.unity
+- path: Assets/Final Proj/Assets/New.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
