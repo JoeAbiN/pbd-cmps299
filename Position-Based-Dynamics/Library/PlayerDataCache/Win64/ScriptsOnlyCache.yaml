@@ -3,21 +3,10 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - Ball
     - CamFollow
-    - ColllisionDetection
-    - NearestPointTest
+    - NVIDIA.Flex.FlexContainer
+    - NVIDIA.Flex.FlexScene
+    - NVIDIA.Flex._auxFlexDetectShapes
     - UIText
-    Obi.dll:
-    - Obi.ObiCloth
-    - Obi.ObiClothBlueprint
-    - Obi.ObiClothRenderer
-    - Obi.ObiCollider
-    - Obi.ObiCollisionMaterial
-    - Obi.ObiFixedUpdater
-    - Obi.ObiParticleAttachment
-    - Obi.ObiParticleGroup
-    - Obi.ObiParticleRenderer
-    - Obi.ObiRigidbody
-    - Obi.ObiSolver
     ProBuilderCore-Unity5.dll:
     - ProBuilder2.Common.pb_PreferenceDictionary
     Unity.2D.Tilemap.Editor.dll:
@@ -26,8 +15,12 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
+    Unity.Rider.Editor.dll:
+    - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
+    - UnityEditor.TestTools.TestRunner.TestListCacheData
+    - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -36,9 +29,9 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.Text
     com.unity.multiplayer-hlapi.Runtime.dll:
-    - UnityEngine.Networking.NetworkIdentity
+    - UnityEngine.Networking.NetworkCallbacks
   sceneClasses:
-    Assets/Field.unity:
+    Assets/Final Proj/Assets/New.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -80,82 +73,44 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 760}
+      Script: {instanceID: 762}
     - Class: 114
-      Script: {instanceID: 9866}
+      Script: {instanceID: 11352}
     - Class: 114
-      Script: {instanceID: 9920}
+      Script: {instanceID: 11590}
     - Class: 114
-      Script: {instanceID: 9944}
+      Script: {instanceID: 11686}
     - Class: 114
-      Script: {instanceID: 10094}
+      Script: {instanceID: 11746}
     - Class: 114
-      Script: {instanceID: 10112}
+      Script: {instanceID: 12396}
     - Class: 114
-      Script: {instanceID: 10116}
+      Script: {instanceID: 12522}
     - Class: 114
-      Script: {instanceID: 10118}
+      Script: {instanceID: 13420}
     - Class: 114
-      Script: {instanceID: 10190}
+      Script: {instanceID: 13930}
     - Class: 114
-      Script: {instanceID: 10206}
+      Script: {instanceID: 14520}
     - Class: 114
-      Script: {instanceID: 10242}
+      Script: {instanceID: 16550}
     - Class: 114
-      Script: {instanceID: 10252}
-    - Class: 114
-      Script: {instanceID: 10524}
-    - Class: 114
-      Script: {instanceID: 10882}
-    - Class: 114
-      Script: {instanceID: 10998}
-    - Class: 114
-      Script: {instanceID: 11056}
-    - Class: 114
-      Script: {instanceID: 11370}
-    - Class: 114
-      Script: {instanceID: 11452}
-    - Class: 114
-      Script: {instanceID: 11630}
-    - Class: 114
-      Script: {instanceID: 11670}
-    - Class: 114
-      Script: {instanceID: 11756}
-    - Class: 114
-      Script: {instanceID: 11800}
-    - Class: 114
-      Script: {instanceID: 11854}
-    - Class: 114
-      Script: {instanceID: 11922}
-    - Class: 114
-      Script: {instanceID: 12098}
-    - Class: 114
-      Script: {instanceID: 12204}
-    - Class: 114
-      Script: {instanceID: 12218}
-    - Class: 114
-      Script: {instanceID: 12336}
-    - Class: 114
-      Script: {instanceID: 12622}
-    - Class: 114
-      Script: {instanceID: 12662}
-    - Class: 114
-      Script: {instanceID: 12908}
+      Script: {instanceID: 16568}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
+    - Class: 134
+      Script: {instanceID: 0}
     - Class: 135
       Script: {instanceID: 0}
-    - Class: 136
-      Script: {instanceID: 0}
-    - Class: 154
-      Script: {instanceID: 0}
-    - Class: 156
+    - Class: 137
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
-    - Class: 218
+    - Class: 183
+      Script: {instanceID: 0}
+    - Class: 196
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
@@ -360,18 +315,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: NVIDIA.Flex
     className: FlexClothAsset
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: UnityEngine.Advertisements.dll
-    namespaceName: UnityEngine.Advertisements
-    className: CallbackExecutor
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: UnityEngine.Advertisements.dll
-    namespaceName: UnityEngine.Advertisements.Editor
-    className: Placeholder
   - hash:
       serializedVersion: 2
       Hash: 7ab0e790220bdca831fdd886b339039d
@@ -596,7 +539,7 @@ ScriptsOnlyBuild:
     className: ObiTearableClothBlueprint
   - hash:
       serializedVersion: 2
-      Hash: 66bca5cc6a18c5298ec75235e56a84d6
+      Hash: 605906914c05f0d6111d560ae189979a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UIText
@@ -986,7 +929,7 @@ ScriptsOnlyBuild:
     className: ObiParticlePicker
   - hash:
       serializedVersion: 2
-      Hash: 0ab79d8fbc27c924e2d2b2f2592bd1ee
+      Hash: 988be4b4df78420764d33793b1d9dcdd
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Ball
@@ -1286,6 +1229,12 @@ ScriptsOnlyBuild:
     className: BaseInput
   - hash:
       serializedVersion: 2
+      Hash: 9b895dcabbc1faf095c000c32d471fd0
+    assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
+    namespaceName: UnityEngine.Networking
+    className: NetworkTransformChild
+  - hash:
+      serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -1310,7 +1259,13 @@ ScriptsOnlyBuild:
     className: TMP_SubMesh
   - hash:
       serializedVersion: 2
-      Hash: 20eeaeae829475b5e354d1f626c51a2b
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.TestRunner.dll
+    namespaceName: UnityEngine.TestRunner.Utils
+    className: TestRunCallbackListener
+  - hash:
+      serializedVersion: 2
+      Hash: 4ef0f7d42cdb13479386e1f049c315aa
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner
     className: PlaymodeTestsController
@@ -1388,5 +1343,5 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 19
   scenePathNames:
-  - Assets/Field.unity
+  - Assets/Final Proj/Assets/New.unity
   playerPath: D:/AUB/Spring 19-20/CMPS 299/project/Build/Position-Based-Dynamics.exe
