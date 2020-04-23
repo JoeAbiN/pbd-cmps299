@@ -14,8 +14,7 @@ public class Ball : MonoBehaviour {
     private Vector3 F;
     float y;
     float dt;
-    
-    public float n = 5f;
+    bool isShot;
 
     public GameObject shotBar;
     private RectTransform barTransform;
@@ -30,6 +29,7 @@ public class Ball : MonoBehaviour {
         dt = Time.fixedDeltaTime;
         y = 0.5f;
         force = 0;
+        isShot = false;
         
         barTransform = shotBar.GetComponent<RectTransform>();
         barTransform.sizeDelta = new Vector2(0, barTransform.sizeDelta.y);
@@ -38,16 +38,45 @@ public class Ball : MonoBehaviour {
     }
 
     void Update() {
+        //Set shot vector
         F = new Vector3(camera.forward.x, y, camera.forward.z);
 
-        if (camComp.depth == 0) {
-            lineRenderer.SetPosition(1, origiPos + 0*F);
+        // Render Line
+        if (camComp.depth == 0 || isShot) {
+            lineRenderer.SetPosition(1, origiPos);
         
         } else {
             lineRenderer.SetPosition(1, origiPos + 8*F);
         }
         lineRenderer.SetPosition(0, origiPos);
         
+        //Set ball position
+        if (Input.GetKey(KeyCode.I)) {
+            transform.Translate(Vector3.forward * dt * 2, Space.World);
+            camera.transform.Translate(Vector3.forward * dt * 2, Space.World);
+            camComp.gameObject.transform.Translate(Vector3.forward * dt * 2, Space.World);
+            origiPos = transform.position;
+        
+        } else if (Input.GetKey(KeyCode.K)) {
+            transform.Translate(-Vector3.forward * dt * 2, Space.World);
+            camera.transform.Translate(-Vector3.forward * dt * 2, Space.World);
+            camComp.gameObject.transform.Translate(-Vector3.forward * dt * 2, Space.World);
+            origiPos = transform.position;
+
+        } else if (Input.GetKey(KeyCode.J)) {
+            transform.Translate(-Vector3.right * dt * 2, Space.World);
+            camera.transform.Translate(-Vector3.right * dt * 2, Space.World);
+            camComp.gameObject.transform.Translate(-Vector3.right * dt * 2, Space.World);
+            origiPos = transform.position;
+
+        } else if (Input.GetKey(KeyCode.L)) {
+            transform.Translate(Vector3.right * dt * 2, Space.World);
+            camera.transform.Translate(Vector3.right * dt * 2, Space.World);
+            camComp.gameObject.transform.Translate(Vector3.right * dt * 2, Space.World);
+            origiPos = transform.position;
+        }
+
+        //Aim up/down
         if (Input.GetKey(KeyCode.W)) {
             y += 0.1f * dt;
         
@@ -55,24 +84,30 @@ public class Ball : MonoBehaviour {
             y -= 0.1f * dt;
         }
 
+        //Charge shot
         if (Input.GetKey(KeyCode.Space)) {
             if (force < maxForce) {
                 force += 10;
             }
         }
 
+        //Release shot
         if (Input.GetKeyUp(KeyCode.Space)) {
+            isShot = true;
             barTransform.sizeDelta = new Vector2(0, barTransform.sizeDelta.y);
             rigidbody.velocity = F * force * dt;
             force = 0;
         }
 
+        //Reset position
         if (Input.GetKeyDown(KeyCode.Z)) {
+            isShot = false;
             force = 0;
             rigidbody.velocity = Vector3.zero;
             transform.position = origiPos;
         }
 
-        barTransform.sizeDelta = new Vector2(force / n, barTransform.sizeDelta.y);
+        //Fill up power bar
+        barTransform.sizeDelta = new Vector2(force / (maxForce/200), barTransform.sizeDelta.y);
     }
 }
